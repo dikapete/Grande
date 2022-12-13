@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe-Ariana Grande</title>
+    <link rel="stylesheet" href="subscribe.css">
+    <script src="https://kit.fontawesome.com/79492f542c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="index.html #album" >ALBUM</a></li>
+                    <li><a href="index.html #video" >VIDEO</a></li>
+                    <li><a href="index.html #shop" >STORE</a></li>
+                    <li><a href="index.html #subscribe"  class="send">SEND US A MESSAGE</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>   
+            </nav>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="container">
+            <fieldset>
+                <h2 id="sub">SUBSCRIBE</h2>
+                <form name="submit-to-google-sheet" action="Thankyoupage.html" method="get">
+                    <label for="text">NAME:</label><br>
+                    <input type="text" id="text" placeholder="* NAME..." name="Name" class="login" required><br>
+                    <label for="mail">EMAIL:</label><br>
+                    <input type="email" id="mail" placeholder="* EMAIL ADDRESS..." name="Email" class="login" required><br>    
+                    <p class="one">* REQUIRED FIELDS</p>
+                    <p class="two">SIGN UP TO RECEIVE EMAIL UPDATES FROM:</p>
+                    <label for="arianagrande">Ariana Grande</label>
+                    <input type="radio" name="EMAILUPDATES" id="arianagrande">
+                    <label for="republicrecords" id="republic">Republic Records</label>
+                    <input id="republicrecords" type="radio" name="EMAILUPDATES">
+                    <p class="three">Emails will be sent by or on behalf of Universal Music Group 2220 Colorado Avenue, Santa Monica,<br> 
+                    CA 90404 (310) 865-4000. You may withdraw your consent at any time. Privacy Policy / <br> 
+                    Do Not Sell My Personal Information</p>
+                </form>
+                <a href="Thankyoupage.html" class="ahref"><button type="submit" class="button">Submit</button></a>
+                <span id="msg"></span>
+            </fieldset>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="social-icons">
+            <a href="https://facebook.com/arianagrande" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/ArianaGrande" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/arianagrande" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/c/arianagrande" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://music.apple.com/us/artist/ariana-grande/412778295" target="_blank"><i class="fab fa-apple"></i></a>
+        </div>
+        <p>Copyright © <span>Group A</span>. Made with <i id="love" class="fas fa-heart"></i> by <span>Group A</span>.</p>
+        <p class="small">IF YOU ARE USING A SCREEN READER AND ARE HAVING PROBLEMS USING THIS WEBSITE, PLEASE CALL 866-682-4413 FOR ASSISTANCE.</p>
+    </div>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJRdmCHEakZwIen6TYflUSIz25DkW2HsDLfX1asupRP61WBPVoo0-upgTfmXuAXVWWIw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+
+</body>
+</html>

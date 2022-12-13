@@ -1,0 +1,214 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 220px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    border-top: 2px solid #b54769;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright #love {
+    color: #ff004f;
+}
+
+.copyright span{
+    color: #ff004f;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.small {
+    font-size: 7px;
+    margin-top: 10px;
+}
+
+#video{
+    padding: 30px 0;
+}
+
+.knock {
+    padding-top: 30px;
+}
+
+.myvideo {
+    border: 2px solid #b54769;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.myvideo img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.myvideo:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pvideo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+/* ---------css for small screen--------- */
+nav .fas{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* #header{
+        background-image: url();
+    } */
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    .send {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul li:hover {
+        text-decoration: underline;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .logo {
+        width: 200px;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .sub-left, .sub-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    .pvideo {
+        font-size: 20px;
+    }
+    .small {
+        font-size: 8px;
+    }
+}

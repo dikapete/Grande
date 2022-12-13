@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Ariana Grande</title>
+    <link rel="stylesheet" href="video.css">
+    <script src="https://kit.fontawesome.com/79492f542c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="index.html #album" >ALBUM</a></li>
+                    <li><a href="index.html #shop" >STORE</a></li>
+                    <li><a href="index.html #subscribe" class="send">SEND US A MESSAGE</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>   
+            </nav>
+        </div>
+    </div>
+    <div id="video">
+        <div class="container">
+            <div class="knock">
+                <div class="myvideo">
+                    <a href="https://www.youtube.com/watch?v=ssq6X6alZ3w" target="_blank"><img src="images/background.jpg"></a>
+                </div>
+            </div>
+            <p class="pvideo">ARIANA GRANDE - 34+35 (REMIX) FT. DOJA CAT, MEGAN THEE STALLION</p>
+            <div class="knock">
+                <div class="myvideo">
+                    <a href="https://www.youtube.com/watch?v=SXiSVQZLje8" target="_blank"><img src="images/sidetoside.png"></a>
+                </div>
+            </div>
+            <p class="pvideo">Ariana Grande ft. Nicki Minaj - Side To Side (Official Video) ft. Nicki Minaj</p>
+            <div class="knock">
+                <div class="myvideo">
+                    <a href="https://www.youtube.com/watch?v=QYh6mYIJG2Y" target="_blank"><img src="images/7rings.png"></a>
+                </div>
+            </div>
+            <p class="pvideo">Ariana Grande - 7 rings (Official Video)</p>
+            <div class="knock">
+                <div class="myvideo">
+                    <a href="https://www.youtube.com/watch?v=ffxKSjUwKdU" target="_blank"><img src="images/notearslefttocry.png"></a>
+                </div>
+            </div>
+            <p class="pvideo">Ariana Grande - no tears left to cry (Official Video)</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="social-icons">
+            <a href="https://facebook.com/arianagrande" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/ArianaGrande" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/arianagrande" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/c/arianagrande" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://music.apple.com/us/artist/ariana-grande/412778295" target="_blank"><i class="fab fa-apple"></i></a>
+        </div>
+        <p>Copyright © <span>Group A</span>. Made with <i id="love" class="fas fa-heart"></i> by <span>Group A</span>.</p>
+        <p class="small">IF YOU ARE USING A SCREEN READER AND ARE HAVING PROBLEMS USING THIS WEBSITE, PLEASE CALL 866-682-4413 FOR ASSISTANCE.</p>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>

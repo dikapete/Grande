@@ -1,0 +1,277 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 220px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    border-top: 2px solid #b54769;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright #love {
+    color: #ff004f;
+}
+
+.copyright span{
+    color: #ff004f;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.small {
+    font-size: 7px;
+    margin-top: 10px;
+}
+
+fieldset {
+    width: 100%;
+    border: 2.5px solid #ff004f;
+    margin: auto;
+    outline-width: 12px;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#sub {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 35px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    letter-spacing: 1.8px;
+    font-family: serif;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+#republic {
+    margin-left: 15px;
+}
+
+.button {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background: #ff004f;
+    border: 2px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff004f;   
+}
+
+.ahref {
+    text-decoration: none;
+}
+
+.one {
+    margin-top: 25px;
+    font-family: cursive;
+}
+
+.two {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.three {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+form input {
+    border: 0;
+    outline: none;
+    background: #ababab;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.login {
+    width: 70%;
+}
+
+#msg {
+    color: #61b752;
+    display: block;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+
+/* ---------css for small screen--------- */
+nav .fas{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* #header{
+        background-image: url();
+    } */
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    .send {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul li:hover {
+        text-decoration: underline;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .logo {
+        width: 200px;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .sub-left, .sub-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    #republic {
+        display: inline-block;
+    }
+    .small {
+        font-size: 8px;
+    }
+}
